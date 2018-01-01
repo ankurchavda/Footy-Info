@@ -1,0 +1,22 @@
+.dropdown {
+  margin-left: 30%;
+}
+/* 
+table {
+  margin: 0px auto;            
+} */
+
+.details{
+  margin-top: 20px;
+}
+
+/* .card{
+  text-align: left
+} */
+/* 
+.card-title{
+  text-align: center
+} */
+.table-hover{
+  cursor: pointer;
+}
