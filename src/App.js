@@ -3,10 +3,9 @@ import PlayerTable from './PlayerTable';
 import Dropdown from './Dropdown';
 import PlayerDetails from './PlayerDetails';
 import './App.css';
-
 const options = {
   headers: {
-    "X-Auth-Token": "de2ab160e3c7470d97441638cc981463"
+    "X-Auth-Token": "Your_Api_Key"
   }
 }
 
