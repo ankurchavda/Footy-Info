@@ -14,20 +14,22 @@ class App extends Component {
     super();
     this.state = { 
       players: [],
-      teams: [{id:'66', name:"Manchester United"},{id:'81', name:"FC Barcelona"}, {id:'86', name:'Real Madrid'}] ,
+      teams: [] ,
       selectedPlayer: null
     };
 
-    this.GetTeamPlayers('86');
+    this.GetTeamPlayers('66');
+    this.GetTeams()
   }
   
   GetTeamPlayers(team) {
+    // console.log(team);
     fetch('http://api.football-data.org/v1/teams/'+team+'/players',options)
     .then( response => {
       return response.json();
     })
     .then( data => {
-      this.setState({ 
+      this.setState({  
         players : data.players,
         selectedPlayer: data.players[0]
       });
@@ -38,7 +40,7 @@ class App extends Component {
   }
 
   GetTeams() {
-    fetch('http://api.football-data.org/v1/competitions/398/teams', options)
+    fetch('http://api.football-data.org/v1/competitions/445/teams', options)
     .then( response => {
       return response.json();
     })
