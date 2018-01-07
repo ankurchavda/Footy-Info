@@ -5,9 +5,11 @@ import PlayerDetails from './PlayerDetails';
 import './App.css';
 const options = {
   headers: {
-    "X-Auth-Token": "Your_Api_Key"
+    "X-Auth-Token": process.env.REACT_APP_API_KEY
   }
 }
+
+console.log(process.env.NODE_ENV);
 
 class App extends Component {
   constructor() {
